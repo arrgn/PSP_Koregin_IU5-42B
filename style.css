@@ -11,6 +11,10 @@ table {
   margin: auto;
 }
 
+mark {
+  background-color: aqua;
+}
+
 img {
   border-radius: 25px;
   margin-top: 20px;
