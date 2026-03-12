@@ -1,0 +1,45 @@
+body {
+  font-size: xx-large;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 20ex;
+  max-width: 28ex;
+}
+
+button {
+  font-size: xx-large;
+  width: 100%;
+  padding: 1ex;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #ffffff;
+  border: 1px solid #000;
+}
+
+.primary:hover {
+  background-color: #ffd900;
+}
+
+.secondary {
+  background-color: #ffd900;
+  border: none;
+}
+
+.secondary:hover {
+  background-color: #f6ff00;
+}
+
+.result {
+  text-align: right;
+  border: 1px solid #000;
+  padding: 1ex;
+  font-weight: bold;
+}
