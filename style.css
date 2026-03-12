@@ -1,5 +1,6 @@
 body {
   font-size: xx-large;
+  font-weight: 300;
 }
 
 table {
@@ -7,12 +8,33 @@ table {
   width: 100%;
   min-width: 20ex;
   max-width: 28ex;
+  margin: auto;
+}
+
+img {
+  border-radius: 25px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
   font-size: xx-large;
   width: 100%;
   padding: 1ex;
+}
+
+.ghbtn {
+  max-width: 10ex;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.ghbtn input {
+  font-size: xx-large;
 }
 
 button:hover {
