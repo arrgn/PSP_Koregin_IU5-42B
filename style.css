@@ -54,7 +54,7 @@ body {
   font-style: normal;
   font-weight: 400;
   margin: 0;
-  background-color: #fff;
+  background-color: White;
   color: #212529;
   text-align: left;
 }
@@ -108,6 +108,30 @@ header {
   width: 100%;
 }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 .flex {
   display: flex !important;
 }
@@ -146,7 +170,7 @@ header ul {
   display: block;
   text-decoration: none;
   margin-bottom: 0;
-  color: #fff;
+  color: white;
   transition: all 0.25s;
   font-family: "FuturaBook", sans-serif;
   font-style: normal;
@@ -304,8 +328,8 @@ button:hover {
 }
 
 .primary {
-  background-color: #ffffff;
-  border: 1px solid #000;
+  background-color: white;
+  border: 1px solid black;
 }
 
 .primary:hover {
@@ -323,7 +347,7 @@ button:hover {
 
 .result {
   text-align: right;
-  border: 1px solid #000;
+  border: 1px solid black;
   padding: 1ex;
   font-weight: bold;
 }
