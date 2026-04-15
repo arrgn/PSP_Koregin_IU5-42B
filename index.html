@@ -5,6 +5,7 @@
     <title>Внимание :: Фонд сохранения исторического наследия</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.png" type="img/png" />
+    <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
     <header>
@@ -88,36 +89,38 @@
     <table>
       <thead>
         <tr>
-          <th colspan="4" id="result"><div class="result">0</div></th>
+          <th colspan="4">
+            <div id="result" class="result">0</div>
+          </th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><button id="btnC" class="btn secondary">C</button></td>
           <td><button id="btnInv" class="btn secondary">+/-</button></td>
-          <td><button id="btn%" class="btn secondary">%</button></td>
-          <td><button id="btn/" class="btn secondary">/</button></td>
+          <td><button id="btn_operator_%" class="btn secondary">%</button></td>
+          <td><button id="btn_operator_/" class="btn secondary">/</button></td>
         </tr>
         <tr>
-          <td><button id="btn7" class="btn primary">7</button></td>
-          <td><button id="btn8" class="btn primary">8</button></td>
-          <td><button id="btn9" class="btn primary">9</button></td>
-          <td><button id="btnX" class="btn secondary">X</button></td>
+          <td><button id="btn_digit_7" class="btn primary">7</button></td>
+          <td><button id="btn_digit_8" class="btn primary">8</button></td>
+          <td><button id="btn_digit_9" class="btn primary">9</button></td>
+          <td><button id="btn_operator_*" class="btn secondary">*</button></td>
         </tr>
         <tr>
-          <td><button id="btn4" class="btn primary">4</button></td>
-          <td><button id="btn5" class="btn primary">5</button></td>
-          <td><button id="btn6" class="btn primary">6</button></td>
-          <td><button id="btn-" class="btn secondary">-</button></td>
+          <td><button id="btn_digit_4" class="btn primary">4</button></td>
+          <td><button id="btn_digit_5" class="btn primary">5</button></td>
+          <td><button id="btn_digit_6" class="btn primary">6</button></td>
+          <td><button id="btn_operator_-" class="btn secondary">-</button></td>
         </tr>
         <tr>
-          <td><button id="btn1" class="btn primary">1</button></td>
-          <td><button id="btn2" class="btn primary">2</button></td>
-          <td><button id="btn3" class="btn primary">3</button></td>
-          <td><button id="btn+" class="btn secondary">+</button></td>
+          <td><button id="btn_digit_1" class="btn primary">1</button></td>
+          <td><button id="btn_digit_2" class="btn primary">2</button></td>
+          <td><button id="btn_digit_3" class="btn primary">3</button></td>
+          <td><button id="btn_operator_+" class="btn secondary">+</button></td>
         </tr>
         <tr>
-          <td><button id="btn0" class="btn primary">0</button></td>
+          <td><button id="btn_digit_0" class="btn primary">0</button></td>
           <td><button id="btnDot" class="btn primary">.</button></td>
           <td colspan="2">
             <button id="btnCalc" class="btn secondary">=</button>
