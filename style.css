@@ -267,6 +267,7 @@ header li a {
   outline: none;
   white-space: nowrap;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn:focus {
@@ -425,10 +426,8 @@ header .btn {
 
 table {
   table-layout: fixed;
-  width: 100%;
-  min-width: 20ex;
-  max-width: 28ex;
   margin: auto;
+  width: 540px;
 }
 
 button {
@@ -443,20 +442,22 @@ button:hover {
 
 .primary {
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #868e96;
 }
 
 .primary:hover {
-  background-color: #ffd900;
+  background-color: #fddd31;
+  border-color: #fddd31;
 }
 
 .secondary {
-  background-color: #ffd900;
+  background-color: #fddd31;
   border: none;
 }
 
 .secondary:hover {
-  background-color: #f6ff00;
+  background-color: #fff200;
+  border-color: #fff200;
 }
 
 .result {
