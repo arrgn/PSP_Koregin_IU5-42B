@@ -92,12 +92,7 @@ header {
   display: block;
   width: 200%;
   height: 28px;
-  background: linear-gradient(
-    180deg,
-    rgba(115, 115, 115, 0) 0%,
-    rgba(0, 0, 0, 0) 0.01%,
-    rgba(0, 0, 0, 0.05) 100%
-  );
+  background: linear-gradient(180deg, rgba(115, 115, 115, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.05) 100%);
   transform: rotate(-180deg);
   position: absolute;
   left: 0;
@@ -438,29 +433,61 @@ button:hover {
   cursor: pointer;
 }
 
-.primary {
+.calc-primary-light {
   background-color: white;
   border: 1px solid #868e96;
 }
 
-.primary:hover {
+.calc-primary-light:hover {
   background-color: #fddd31;
   border-color: #fddd31;
 }
 
-.secondary {
+.calc-secondary-light {
   background-color: #fddd31;
   border: none;
 }
 
-.secondary:hover {
+.calc-secondary-light:hover {
   background-color: #fff200;
   border-color: #fff200;
 }
 
-.result {
+.calc-primary-dark {
+  background-color: #343a40;
+  border: 1px solid #495057;
+  color: #f8f9fa;
+}
+
+.calc-primary-dark:hover {
+  background-color: #b8860b;
+  border-color: #6c757d;
+}
+
+.calc-secondary-dark {
+  background-color: #b8860b;
+  border: none;
+  color: #f8f9fa;
+}
+
+.calc-secondary-dark:hover {
+  background-color: #daa520;
+  border-color: #daa520;
+}
+
+.calc-result {
   text-align: right;
-  border: 1px solid black;
+  border: 1px solid;
   padding: 1ex;
   font-weight: bold;
+}
+
+.calc-result-light {
+  border-color: black;
+}
+
+.calc-result-dark {
+  background-color: #343a40;
+  border-color: #495057;
+  color: #f8f9fa;
 }
