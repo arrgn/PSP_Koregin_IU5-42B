@@ -417,10 +417,11 @@ header .btn {
   color: #212529;
 }
 
-table {
+.calculator {
   table-layout: fixed;
   margin: auto;
   width: 540px;
+  padding-top: 20px;
 }
 
 button {
