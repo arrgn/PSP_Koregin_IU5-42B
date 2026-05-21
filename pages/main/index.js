@@ -1,6 +1,7 @@
 import { SaveCardComponent } from "../../components/save-card/index.js";
 import { CardPage } from "../card/index.js";
 import { FilterButtonComponent } from "../../components/filter-button/index.js";
+import { AddButtonComponent } from "../../components/add-button/index.js";
 
 export class MainPage {
   constructor(parent) {
@@ -39,6 +40,7 @@ export class MainPage {
         status: "pending",
       },
     ];
+    this.newId = this.allRecords.length + 1;
   }
 
   getHTML() {
@@ -75,6 +77,20 @@ export class MainPage {
     this.render();
   }
 
+  addCard(e) {
+    const newCardOrigin =
+      this.status == "all" ? this.allRecords[0] : this.allRecords.find((el) => el.status == this.status);
+    const newCard = { ...newCardOrigin };
+    if (!newCard) {
+      return;
+    }
+
+    newCard.id = this.newId++;
+    this.allRecords.push(newCard);
+
+    this.renderData();
+  }
+
   setStatusFilter(e) {
     const status = e.target.dataset.status;
     this.status = status;
@@ -96,7 +112,9 @@ export class MainPage {
     filterDone.render(this.setStatusFilter.bind(this));
 
     document.getElementById("lbl-pending").classList.add("lbl-active");
-    console.log(document.getElementById("lbl-pending").classList);
+
+    const addCard = new AddButtonComponent(filters);
+    addCard.render(this.addCard.bind(this));
   }
 
   renderData() {

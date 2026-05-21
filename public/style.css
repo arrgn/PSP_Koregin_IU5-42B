@@ -655,3 +655,7 @@ h1 {
   color: black;
   opacity: 1;
 }
+
+#add-button {
+  float: right;
+}
