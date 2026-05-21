@@ -87,12 +87,7 @@ header {
   display: block;
   width: 200%;
   height: 28px;
-  background: linear-gradient(
-    180deg,
-    rgba(115, 115, 115, 0) 0%,
-    rgba(0, 0, 0, 0) 0.01%,
-    rgba(0, 0, 0, 0.05) 100%
-  );
+  background: linear-gradient(180deg, rgba(115, 115, 115, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.05) 100%);
   transform: rotate(-180deg);
   position: absolute;
   left: 0;
@@ -508,7 +503,7 @@ button:hover {
   text-transform: uppercase;
 }
 
-.cards-root {
+#cards-root {
   margin-top: 25px;
 }
 
@@ -607,4 +602,56 @@ h1 {
 
 #back-button {
   margin-top: 36px;
+}
+
+.filters-root {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.lbl {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #f7f7f7;
+  background-position: 15px;
+  background-repeat: no-repeat;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 14px 14px 14px 55px;
+  transition: all 0.2s ease;
+}
+
+.lbl:hover {
+  background-color: #fddd31;
+  color: black;
+  opacity: 1;
+}
+
+.lbl-all {
+  padding-left: 10px;
+}
+
+.lbl-pending {
+  background-image: url(./money@2x.png);
+  background-size: 32px;
+}
+
+.lbl-working {
+  background-image: url(./process@2x.png);
+  background-size: 26px;
+}
+
+.lbl-done {
+  background-image: url(./finished@2x.png);
+  background-size: 30px;
+}
+
+.lbl-active {
+  background-color: #fddd31;
+  color: black;
+  opacity: 1;
 }

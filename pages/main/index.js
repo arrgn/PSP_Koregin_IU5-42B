@@ -1,5 +1,6 @@
 import { SaveCardComponent } from "../../components/save-card/index.js";
 import { CardPage } from "../card/index.js";
+import { FilterButtonComponent } from "../../components/filter-button/index.js";
 
 export class MainPage {
   constructor(parent) {
@@ -26,11 +27,9 @@ export class MainPage {
       {
         id: 3,
         src: "./public/3.jpg",
-        title:
-          "11 памятников Старого кладбища: проект консервации и противоаварийных работ",
+        title: "11 памятников Старого кладбища: проект консервации и противоаварийных работ",
         adress: "Таганрог, Лагерный переулок",
-        description:
-          "Проектная документация по консервационным и противоаварийным работам.",
+        description: "Проектная документация по консервационным и противоаварийным работам.",
         status: "pending",
       },
     ];
@@ -45,6 +44,10 @@ export class MainPage {
   }
 
   getData() {
+    if (this.status == "all") {
+      return this.allRecords;
+    }
+
     return this.allRecords.filter((el) => el.status == this.status);
   }
 
@@ -65,15 +68,45 @@ export class MainPage {
     this.render();
   }
 
-  render() {
-    this.parent.innerHTML = this.getHTML();
+  setStatusFilter(e) {
+    const status = e.target.dataset.status;
+    this.status = status;
+
+    this.renderData();
+  }
+
+  renderFilters() {
     const filters = document.getElementById("filters-root");
+    filters.innerHTML = "";
+
+    const filterAll = new FilterButtonComponent(filters, "all", "Все");
+    const filterPending = new FilterButtonComponent(filters, "pending", "Сбор денег");
+    const filterWorking = new FilterButtonComponent(filters, "working", "В процессе");
+    const filterDone = new FilterButtonComponent(filters, "done", "Завершены");
+    filterAll.render(this.setStatusFilter.bind(this));
+    filterPending.render(this.setStatusFilter.bind(this));
+    filterWorking.render(this.setStatusFilter.bind(this));
+    filterDone.render(this.setStatusFilter.bind(this));
+
+    document.getElementById("lbl-pending").classList.add("lbl-active");
+    console.log(document.getElementById("lbl-pending").classList);
+  }
+
+  renderData() {
     const cards = document.getElementById("cards-root");
+    cards.innerHTML = "";
 
     const data = this.getData();
     data.forEach((el) => {
       const saveCard = new SaveCardComponent(cards);
       saveCard.render(el, this.openCard.bind(this), this.delCard.bind(this));
     });
+  }
+
+  render() {
+    this.parent.innerHTML = this.getHTML();
+
+    this.renderFilters();
+    this.renderData();
   }
 }
