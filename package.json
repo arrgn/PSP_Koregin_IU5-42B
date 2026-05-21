@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/arrgn/PSP_Koregin_IU5-42B/issues"
   },
-  "homepage": "https://github.com/arrgn/PSP_Koregin_IU5-42B#readme"
+  "homepage": "https://github.com/arrgn/PSP_Koregin_IU5-42B#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
 }

@@ -132,7 +132,7 @@ header {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 960px !important;
   }
 
   .col-lg-7 {
@@ -260,70 +260,70 @@ header li a {
 }
 
 .btn {
-  appearance: none;
-  box-shadow: none;
-  outline: none;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: all 0.2s;
+  appearance: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
 }
 
 .btn:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+  outline: 0 !important;
 }
 
 .btn:active {
-  background-image: none;
+  background-image: none !important;
 }
 
 header .btn-main {
-  box-sizing: border-box;
-  user-select: none;
-  background-color: #fddd31;
-  font-style: normal;
-  font-weight: 600;
-  border: 1px solid #fddd31;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 9px 10px;
-  height: 40px;
-  margin-right: 30px;
+  box-sizing: border-box !important;
+  user-select: none !important;
+  background-color: #fddd31 !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  border: 1px solid #fddd31 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  padding: 9px 10px !important;
+  height: 40px !important;
+  margin-right: 30px !important;
 }
 
 header .btn-main:hover {
-  background-color: #fff200;
-  border-color: #fff200;
+  background-color: #fff200 !important;
+  border-color: #fff200 !important;
 }
 
 header .btn-secondary {
-  vertical-align: middle;
-  user-select: none;
-  font-weight: 600;
-  border: 1px solid #868e96;
-  box-sizing: border-box;
-  background-color: white;
-  outline: 0;
-  height: 40px;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 9px 10px;
+  vertical-align: middle !important;
+  user-select: none !important;
+  font-weight: 600 !important;
+  border: 1px solid #868e96 !important;
+  box-sizing: border-box !important;
+  background-color: white !important;
+  outline: 0 !important;
+  height: 40px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  padding: 9px 10px !important;
 }
 
 header .btn-secondary:hover {
-  background-color: #fddd31;
-  border-color: #fddd31;
-  color: #212529;
+  background-color: #fddd31 !important;
+  border-color: #fddd31 !important;
+  color: #212529 !important;
 }
 
 .btn-secondary:focus {
-  box-shadow: 0 0 0 0.2rem hsla(208, 7%, 46%, 0.5);
+  box-shadow: 0 0 0 0.2rem hsla(208, 7%, 46%, 0.5) !important;
 }
 
 .btn-secondary:active {
-  background-color: #545b62;
-  border-color: #545b62;
-  color: white;
+  background-color: #545b62 !important;
+  border-color: #545b62 !important;
+  color: white !important;
 }
 
 .col-lg {
@@ -355,8 +355,8 @@ header .btn-secondary:hover {
 
 @media (min-width: 992px) {
   .col-lg {
-    flex: 0, 0, 50%;
-    max-width: 50%;
+    flex: 0, 0, 50% !important;
+    max-width: 50% !important;
   }
 }
 
@@ -374,53 +374,53 @@ h2 {
 }
 
 .btn.btn-default::after {
-  background-color: gold;
-  bottom: -4px;
-  content: "";
-  height: 4px;
-  left: 0px;
-  position: absolute;
-  top: auto;
-  transform: all 0.2s ease;
-  width: 100%;
-  z-index: -1;
+  background-color: gold !important;
+  bottom: -4px !important;
+  content: "" !important;
+  height: 4px !important;
+  left: 0px !important;
+  position: absolute !important;
+  top: auto !important;
+  transform: all 0.2s ease !important;
+  width: 100% !important;
+  z-index: -1 !important;
 }
 
 .btn.btn-default {
-  background-color: transparent;
-  color: black;
-  font-size: 16px;
-  font-weight: 700;
+  background-color: transparent !important;
+  color: black !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
   outline: none !important;
-  padding: 0;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  appearance: none;
+  padding: 0 !important;
+  position: relative !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  appearance: none !important;
 }
 
 .buttons-row .btn {
-  margin-bottom: 20px;
-  margin-right: 30px;
+  margin-bottom: 20px !important;
+  margin-right: 30px !important;
 }
 
 .btn.btn-default:hover::after {
-  bottom: 0;
-  height: 100%;
+  bottom: 0 !important;
+  height: 100% !important;
 }
 
 .btn.btn-default:hover {
-  bottom: 0;
-  height: 100%;
+  bottom: 0 !important;
+  height: 100% !important;
 }
 
 header .btn {
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0;
-  transition: all 0.25s;
-  color: #212529;
+  text-align: center !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  border-radius: 0 !important;
+  transition: all 0.25s !important;
+  color: #212529 !important;
 }
 
 .calculator {
@@ -558,7 +558,7 @@ h3 + .card-adress {
 }
 
 .card-item .buttons-row .btn {
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 .projectname {
