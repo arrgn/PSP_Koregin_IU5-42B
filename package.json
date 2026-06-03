@@ -1,0 +1,28 @@
+{
+  "name": "psp_koregin_iu5-42b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrgn/PSP_Koregin_IU5-42B.git"
+  },
+  "keywords": [],
+  "author": "arrgn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arrgn/PSP_Koregin_IU5-42B/issues"
+  },
+  "homepage": "https://github.com/arrgn/PSP_Koregin_IU5-42B#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prettier": "^3.8.3"
+  }
+}
