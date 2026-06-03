@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("node:path");
-const savesRouter = require("./routes/saves");
+const savesRouter = require("./routers/save");
 const savesService = require("./services/savesService");
 
 const app = express();
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/stocks", savesRouter);
+app.use("/saves", savesRouter);
 
 app.use((req, res) => {
   res.status(404).json({ error: "Маршрут не найден" });

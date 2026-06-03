@@ -18,13 +18,13 @@ const getSaveById = (req, res) => {
 };
 
 const createSave = (req, res) => {
-  const { src, title, adress, description, text } = req.body;
+  const { title, adress, description, text } = req.body;
 
-  if (!src || !title || !adress || !description || !text) {
+  if (!title || !adress || !description || !text) {
     return res.status(400).json({ error: "Не все поля заполнены" });
   }
 
-  const newSave = savesService.create({ src, title, adress, description, text });
+  const newSave = savesService.create({ title, adress, description, text });
   res.status(201).json(newSave);
 };
 
