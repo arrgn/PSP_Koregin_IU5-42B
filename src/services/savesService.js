@@ -24,7 +24,7 @@ const create = (saveData) => {
 
   const newId = saves.length > 0 ? Math.max(...saves.map((s) => s.id)) + 1 : 1;
 
-  const newStock = { id: newId, ...saveData };
+  const newStock = { id: newId, ...saveData, src: `./public/${newId}.jpg`, desc_src: `./public/${newId}-1.jpg` };
   saves.push(newStock);
   fileService.writeData(dataFilePath, saves);
 
