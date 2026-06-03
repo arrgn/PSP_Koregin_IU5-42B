@@ -6,11 +6,11 @@ const savesService = require("./services/savesService");
 const app = express();
 const PORT = 3000;
 
-app.disable("x-powered-by");
-
 const DATA_FILE_PATH = path.join(__dirname, "data/saves.json");
 
 savesService.init(DATA_FILE_PATH);
+
+app.disable("x-powered-by");
 
 app.use(express.json());
 
