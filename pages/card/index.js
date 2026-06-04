@@ -8,10 +8,6 @@ export class CardPage {
     this.mainPage = mainPage;
   }
 
-  get pageRoot() {
-    return document.getElementById("product-page");
-  }
-
   clickBack() {
     this.mainPage.render();
   }
