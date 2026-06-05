@@ -140,3 +140,6 @@ vite.config.ts.timestamp-*
 
 # Prettier config
 .prettierrc
+
+# Vite build
+build
