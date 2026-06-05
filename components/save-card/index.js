@@ -28,15 +28,9 @@ export class SaveCardComponent {
   }
 
   addListeners(data, openListener, editListener, delListener) {
-    document
-      .getElementById(`open-card-${data.id}`)
-      .addEventListener("click", openListener);
-    document
-      .getElementById(`edit-card-${data.id}`)
-      .addEventListener("click", editListener);
-    document
-      .getElementById(`del-card-${data.id}`)
-      .addEventListener("click", delListener);
+    document.getElementById(`open-card-${data.id}`).addEventListener("click", openListener);
+    document.getElementById(`edit-card-${data.id}`).addEventListener("click", editListener);
+    document.getElementById(`del-card-${data.id}`).addEventListener("click", delListener);
   }
 
   render(data, openListener, editListener, delListener) {

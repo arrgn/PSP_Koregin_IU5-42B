@@ -16,8 +16,7 @@ export class FormComponent {
       status = "pending",
     } = data;
 
-    const headerTitle =
-      this.mode === "edit" ? "Редактировать музей" : "Добавить новый музей";
+    const headerTitle = this.mode === "edit" ? "Редактировать музей" : "Добавить новый музей";
 
     // Генерируем выпадающий список для редактирования
     const statusSelect =
@@ -78,15 +77,9 @@ export class FormComponent {
   }
 
   addListeners(submitListener, cancelListener) {
-    document
-      .getElementById("add-form")
-      .addEventListener("submit", submitListener);
-    document
-      .getElementById("save-button")
-      .addEventListener("click", submitListener);
-    document
-      .getElementById("cancel-button")
-      .addEventListener("click", cancelListener);
+    document.getElementById("add-form").addEventListener("submit", submitListener);
+    document.getElementById("save-button").addEventListener("click", submitListener);
+    document.getElementById("cancel-button").addEventListener("click", cancelListener);
   }
 
   render(data, submitListener, cancelListener) {

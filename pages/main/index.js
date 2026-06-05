@@ -66,16 +66,8 @@ export class MainPage {
     filters.innerHTML = "";
 
     const filterAll = new FilterButtonComponent(filters, "all", "Все");
-    const filterPending = new FilterButtonComponent(
-      filters,
-      "pending",
-      "Сбор денег",
-    );
-    const filterWorking = new FilterButtonComponent(
-      filters,
-      "working",
-      "В процессе",
-    );
+    const filterPending = new FilterButtonComponent(filters, "pending", "Сбор денег");
+    const filterWorking = new FilterButtonComponent(filters, "working", "В процессе");
     const filterDone = new FilterButtonComponent(filters, "done", "Завершены");
     filterAll.render(this.setStatusFilter.bind(this));
     filterPending.render(this.setStatusFilter.bind(this));
@@ -94,12 +86,7 @@ export class MainPage {
 
     data.forEach((el) => {
       const saveCard = new SaveCardComponent(cards);
-      saveCard.render(
-        el,
-        this.openCard.bind(this),
-        this.openEditForm.bind(this),
-        this.delCard.bind(this),
-      );
+      saveCard.render(el, this.openCard.bind(this), this.openEditForm.bind(this), this.delCard.bind(this));
     });
   }
 

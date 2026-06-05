@@ -18,17 +18,13 @@ export class EditPage {
       return;
     }
 
-    ajax.patch(
-      saveUrls.updateSaveById(formData.id),
-      formData,
-      (data, status) => {
-        if (status === 200 || status === 201) {
-          this.mainPage.render();
-        } else {
-          alert("Ошибка при сохранении карточки");
-        }
-      },
-    );
+    ajax.patch(saveUrls.updateSaveById(formData.id), formData, (data, status) => {
+      if (status === 200 || status === 201) {
+        this.mainPage.render();
+      } else {
+        alert("Ошибка при сохранении карточки");
+      }
+    });
   }
 
   cancelForm() {
@@ -40,11 +36,7 @@ export class EditPage {
 
     ajax.get(saveUrls.getSaveById(this.cardId), (data) => {
       this.form = new FormComponent(this.parent, "edit");
-      this.form.render(
-        data,
-        this.submitForm.bind(this),
-        this.cancelForm.bind(this),
-      );
+      this.form.render(data, this.submitForm.bind(this), this.cancelForm.bind(this));
     });
   }
 }
