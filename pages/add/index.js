@@ -32,8 +32,7 @@ export class AddPage {
 
   render() {
     this.parent.innerHTML = "";
-
-    this.form = new FormComponent(this.parent);
+    this.form = new FormComponent(this.parent, "create");
     this.form.render(
       {},
       this.submitForm.bind(this),

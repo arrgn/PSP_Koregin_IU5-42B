@@ -3,6 +3,7 @@ import { CardPage } from "../card/index.js";
 import { FilterButtonComponent } from "../../components/filter-button/index.js";
 import { AddButtonComponent } from "../../components/add-button/index.js";
 import { AddPage } from "../add/index.js";
+import { EditPage } from "../edit/index.js";
 import { ajax } from "../../modules/ajax.js";
 import { saveUrls } from "../../modules/saveUrls.js";
 
@@ -47,6 +48,12 @@ export class MainPage {
     this.addPage.render();
   }
 
+  openEditForm(e) {
+    const cardId = e.target.dataset.id;
+    this.editPage = new EditPage(this.parent, this, cardId);
+    this.editPage.render();
+  }
+
   setStatusFilter(e) {
     const status = e.target.dataset.status;
     this.status = status;
@@ -87,7 +94,12 @@ export class MainPage {
 
     data.forEach((el) => {
       const saveCard = new SaveCardComponent(cards);
-      saveCard.render(el, this.openCard.bind(this), this.delCard.bind(this));
+      saveCard.render(
+        el,
+        this.openCard.bind(this),
+        this.openEditForm.bind(this),
+        this.delCard.bind(this),
+      );
     });
   }
 

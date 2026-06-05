@@ -17,6 +17,7 @@ export class SaveCardComponent {
               <p class="card-text">${data.description}</p>
               <div class="buttons-row">
                 <a class="btn btn-default uppercase" id="open-card-${data.id}" data-id="${data.id}">Подробнее</a>
+                <a class="btn btn-default uppercase" id="edit-card-${data.id}" data-id="${data.id}">Редактировать</a>
                 <a class="btn btn-default uppercase" id="del-card-${data.id}" data-id="${data.id}">Удалить</a>
               </div>
             </div>
@@ -26,14 +27,21 @@ export class SaveCardComponent {
         `;
   }
 
-  addListeners(data, openListener, delListener) {
-    document.getElementById(`open-card-${data.id}`).addEventListener("click", openListener);
-    document.getElementById(`del-card-${data.id}`).addEventListener("click", delListener);
+  addListeners(data, openListener, editListener, delListener) {
+    document
+      .getElementById(`open-card-${data.id}`)
+      .addEventListener("click", openListener);
+    document
+      .getElementById(`edit-card-${data.id}`)
+      .addEventListener("click", editListener);
+    document
+      .getElementById(`del-card-${data.id}`)
+      .addEventListener("click", delListener);
   }
 
-  render(data, openListener, delListener) {
+  render(data, openListener, editListener, delListener) {
     const html = this.getHTML(data);
     this.parent.insertAdjacentHTML("beforeend", html);
-    this.addListeners(data, openListener, delListener);
+    this.addListeners(data, openListener, editListener, delListener);
   }
 }
