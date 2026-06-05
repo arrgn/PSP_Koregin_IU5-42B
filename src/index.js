@@ -19,6 +19,9 @@ app.use((req, res, next) => {
   next();
 });
 
+const publicPath = path.join(__dirname, "..", "public");
+app.use(express.static(publicPath));
+
 app.use("/saves", savesRouter);
 
 app.use((req, res) => {
